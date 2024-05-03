@@ -26,4 +26,4 @@ jobs:
         if: ${{ !contains(env.COMMIT_MESSAGES, '#skip') }}
         env:
           COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
-        run: echo "WE DID IT"
+        run: echo "WE DID IT!"
