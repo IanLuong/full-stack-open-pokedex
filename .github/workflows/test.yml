@@ -22,8 +22,3 @@ jobs:
         env:
           COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
         run: echo "$COMMIT_MESSAGES"
-      - name: Run only if commit msg contains skip
-        env:
-          COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
-        if: !contains(github.event.commits.*.message, '#skip')
-        run: "THIS WORKED"
